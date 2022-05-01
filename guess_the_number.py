@@ -3,7 +3,7 @@ from random import randint
 
 def game():
     num_comp = randint(1, 100)
-    while game:
+    while True:
         try:
             num_hero = int(input("Guess the number: "))
             if num_hero < num_comp:
@@ -14,7 +14,7 @@ def game():
                 print("You win!")
                 break
         except ValueError:
-            print("It's not a number!")
+            print("Sorry, only integers are accepted.")
 
 
 game()
